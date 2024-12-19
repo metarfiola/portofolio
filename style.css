@@ -1,0 +1,905 @@
+/* Menambahkan font Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Button Styles */
+.btn {
+  text-decoration: none;
+  background-color: white; /* Set background to white */
+  color: black; /* Set text color to black */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: 2px solid black; /* Add border to make it visible */
+}
+
+.btn:hover {
+  background-color: black; /* Set background to black when hovered */
+  color: white; /* Change text color to white when hovered */
+  transform: translateY(-5px); /* Add a small hover effect */
+}
+
+.certificates {
+  display: flex;
+  flex-direction: column; /* Mengatur elemen di dalamnya menjadi kolom */
+  align-items: center; /* Pusatkan semua elemen secara horizontal */
+  justify-content: center; /* Pusatkan konten secara vertikal */
+  padding: 3rem 1.5rem;
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+.section-title {
+  font-size: 2rem; /* Sesuaikan ukuran teks */
+  margin-bottom: 2rem; /* Tambahkan jarak di bawah judul */
+  font-weight: bold; /* Jadikan teks lebih tebal */
+  color: #333; /* Warna judul */
+  text-align: center; /* Pusatkan teks */
+}
+
+/* Certificate Grid */
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom pada layar besar */
+  gap: 2rem; /* Jarak antar kartu */
+  width: 100%; /* Memastikan grid memenuhi seluruh lebar */
+  max-width: 1200px; /* Max width agar tidak terlalu lebar pada layar besar */
+  justify-items: center; /* Pusatkan elemen grid secara horizontal */
+}
+
+/* Certificate Card Styling */
+.certificate-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Certificate Image */
+.certificate-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Crop image to fit card dimensions */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Certificate Content */
+.certificate-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.certificate-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.certificate-description {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Certificate Buttons */
+.certificate-buttons a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  background-color: #1e1e24;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.certificate-buttons a:hover {
+  background-color: #f4f4f4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certificate-grid {
+    grid-template-columns: 1fr; /* Pada layar kecil, tampilkan satu kartu per baris */
+  }
+
+  .certificate-description {
+    font-size: 0.85rem; /* Adjust smaller text for mobile screens */
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Global Styles */
+body {
+  background-color: #f7f7f2;
+  font-family: "Poppins", sans-serif;
+}
+
+  .content h1 {
+    font-size: 2rem; /* Adjust title size on smaller screens */
+  }
+
+  .content p {
+    font-size: 1rem; /* Adjust paragraph size on smaller screens */
+  }
+
+  .image img {
+    width: 70%; /* Further reduce image size for small screens */
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+a:hover {
+  color: #1e1e24; /* Change link color on hover */
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navmenu {
+  display: flex;
+}
+
+.navmenu a {
+  display: inline-block;
+  margin: 0 1.5rem;
+  font-weight: 500;
+  transition: all 0.6s;
+}
+
+.navmenu a:hover {
+  transform: translateX(-5px);
+  color: #6a11cb; /* Add hover color */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column; /* Stack text on smaller screens */
+    align-items: center;
+  }
+
+  .content h1 {
+    font-size: 2rem; /* Adjust title size on smaller screens */
+  }
+
+  .content p {
+    font-size: 1rem; /* Adjust paragraph size on smaller screens */
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 8rem;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navmenu {
+  display: flex;
+}
+
+.navmenu a {
+  display: inline-block;
+  margin: 0 1.5rem;
+  font-weight: 500;
+  transition: all 0.6s;
+}
+
+.navmenu a:hover {
+  transform: translateX(-5px);
+}
+
+/* Home Section */
+.home {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 2rem 5rem 0 18rem;
+  gap: 1rem;
+}
+
+.home-img img {
+  width: 100%;
+  height: auto;
+}
+
+.home-text h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home-text h3 {
+  position: relative;
+  padding-left: 6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.home-text h3::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 2px;
+  background-color: #1e1e24;
+  left: 0;
+  top: 1rem;
+}
+
+.home-text p {
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: #f7f7f2;
+  border: 1px solid #1e1e24;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  background: #1e1e24;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background: #f7f7f2;
+  transform: translateY(5px);
+}
+
+/* Social Media Icons */
+.socials-icons {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.socials-icons i {
+  display: block;
+  color: #1e1e24;
+  font-size: 1.5rem;
+  transition: all 0.6s;
+}
+
+.socials-icons i:hover {
+  transform: rotate3d(0, 0, 1, 90deg);
+}
+
+/* Scroll Button */
+.scroll-btn {
+  position: absolute;
+  bottom: 7%;
+  left: 9%;
+}
+
+.scroll-btn {
+  color: #1e1e24;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: #333;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #1e1e24;
+}
+
+/* Main Section Styles */
+main {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: #333;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+/* Main Section Styles */
+main {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: black;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar */
+nav {
+  background-color: black;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar */
+nav {
+  background-color: black;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1e1e1e;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+  background-color: #fff;
+}
+
+/* Project Cards Section */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar */
+nav {
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: transparent; /* Menghapus latar belakang hitam */
+}
+
+nav .logo {
+  color: black; /* Logo berwarna hitam */
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black; /* Teks navbar berwarna hitam */
+  font-weight: 400;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007bff; /* Warna teks saat hover */
+  background-color: #f4f4f4; /* Latar belakang saat hover */
+}
+
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9c2d4; /* Pink background */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styling */
+nav {
+  background-color: transparent; /* Remove background */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/* Description Section */
+.project-description-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.project-description-section h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.project-description-section p {
+  font-size: 1.1em;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Projects section */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 30px;
+}
+
+/* Project Card Styling */
+.project-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-image {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 100%;
+}
+
+.project-content {
+  padding: 15px;
+}
+
+.project-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-description {
+  font-size: 1em;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #1e1e24;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #1e1e1e;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 90vh;
+	display: grid;
+	place-items: center;
+	background: #ffff;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.card {
+	border-radius: 2em;
+	width: 300px;
+	height: 300px;
+	position: relative;
+	cursor: pointer;
+	margin: 4em 2em;
+	background: #fff;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+figure {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transform-origin: 0% 0%;
+	transition: all 850ms ease-in-out;
+	z-index: 2;
+	background: #ffff;
+    border-radius: 2em;
+}
+
+.bubblesBG {
+	background: #ffff;
+}
+
+.blossomBG {
+	background: #ffff;
+}
+
+.buttercupBG {
+	background: #ffff;
+}
+
+.card:hover figure {
+	top: -10%;
+	left: -10%;
+	transform: scale(0.6);
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 2em;
+}
+
+.title {
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	right: 0;
+	display: grid;
+	place-items: center;
+	z-index: 1;
+}
+
+.title h2 {
+	font-size: 1.25rem;
+	text-align: center;
+}
+
+.content {
+	position: absolute;
+	bottom: 0;
+	padding: 1em 1.5em;
+	z-index: 1;
+	color: #ffff;
+	line-height: 20px;
+}
+
+/** Responsive **/
+@media (min-width: 768px) {
+	section {
+		display: flex;
+	}
+	.title h2 {
+		font-size: 1.60rem;
+	}
+}
